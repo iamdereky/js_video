@@ -46,3 +46,13 @@ document.querySelector("#skip").addEventListener("click", function() {
 	console.log("The new video time is " + video.currentTime);	
 });
 
+document.querySelector("#mute").addEventListener("click", function() {
+	video.muted = !video.muted;
+	if (video.muted) {
+		document.querySelector("mute").innerHTML = "Unmute";
+	}
+	else {
+		document.querySelector("mute").innerHTML = "Mute";
+	}
+});
+
